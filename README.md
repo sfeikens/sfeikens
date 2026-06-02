@@ -19,6 +19,6 @@
 ![](https://github-contributor-stats.vercel.app/api?username=sfeikens&limit=5&theme=chartreuse-dark&combine_all_yearly_contributions=true)
 
 ---
-[![](https://komarev.com/ghpvc/?username=sfeikens&icon=2&color=3)](https://visitcount.itsvg.in)
+[![](https://komarev.com/ghpvc/?username=sfeikens&icon=2&color=red)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
