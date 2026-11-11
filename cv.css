@@ -1,0 +1,49 @@
+/* CV: A4 staand, twee kolommen (zijbalk + hoofdkolom) */
+:root {
+  --ink: #1b1f24;
+  --muted: #5f6872;
+  --line: #cfd4d9;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #e9ecef; font-family: var(--sans); color: var(--ink); line-height: 1.55; font-size: 14px; padding: 2rem 0; }
+a { color: inherit; }
+
+.page { max-width: 794px; margin: 0 auto; background: #fff; padding: 48px; display: grid; grid-template-columns: 220px 1fr; gap: 40px; }
+
+/* Zijbalk */
+.side section { margin-bottom: 22px; }
+.photo { width: 100%; aspect-ratio: 3 / 4; display: grid; place-items: center; border: 1px dashed var(--muted); color: var(--muted); margin-bottom: 24px; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.side p, .side li { font-size: 13px; overflow-wrap: anywhere; }
+.side li { padding: 2px 0; }
+
+h2 { font-family: var(--serif); font-size: 15px; margin-bottom: 8px; padding-bottom: 3px; border-bottom: 1px solid var(--ink); }
+ul { list-style: none; }
+
+/* Hoofdkolom */
+h1 { font-family: var(--serif); font-size: 34px; font-weight: bold; line-height: 1.15; }
+.subtitle { color: var(--muted); margin: 6px 0 24px; }
+.main section { margin-bottom: 22px; }
+
+.entry { margin-bottom: 12px; }
+.entry-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.entry-head h3 { font-size: 14px; }
+.entry-head span { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.where { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 700px) {
+  .page { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+  .photo { max-width: 180px; }
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  body { background: #fff; padding: 0; font-size: 11pt; }
+  .page { max-width: none; padding: 0; grid-template-columns: 62mm 1fr; gap: 12mm; }
+  .side p, .side li, .where { font-size: 10pt; }
+  h1 { font-size: 26pt; }
+  h2 { font-size: 12pt; }
+  .entry, .side section { break-inside: avoid; }
+}
